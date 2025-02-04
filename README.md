@@ -23,7 +23,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ### Links
 
 - Solution URL: [Solution](https://github.com/Stephen-Salano/recipe-page-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://stephen-salano.github.io/recipe-page-main/)
 
 ## My process
 
@@ -66,5 +66,4 @@ Using media queries to style different screen sizes versions
 ```
 ## Author
 
-- Website - [Stephen Salano](https://www.your-site.com)
-- Frontend Mentor - [Stephen-Salano](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [Stephen-Salano](https://www.frontendmentor.io/profile/Stephen-Salano)
