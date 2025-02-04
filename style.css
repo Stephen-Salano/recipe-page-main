@@ -24,33 +24,50 @@
 
     /* Font sizes */
     --pargarph-size: 16px;
-
-    /* Desktop screen width */
-    @media (min-width: 375px) {
-        #container{
-            min-width: 24rem;
-            height: auto;
-            max-width: 40em;
-        }
-    }
-
-    @media (min-width: 1440px) {
-        #container{
-            min-width: 24rem;
-            height: auto;
-            max-width: 35rem;
-        }
-    }
 }
 
+@media (min-width: 400px) and (max-width: 1440px){
+    #container{
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        /* Ensure the container size never grows past this size */
+        max-width: 50rem;
+        width: auto;
+        margin: 2rem;
+        padding: 2rem;
+    }
+    header > img{
+        border-radius: 10px;
+        height: auto;
+        /* image will not exceed the width of it's container */
+        max-width: 100%;
+        /*Maintains aspect ratio */
+        min-width: 0px;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+@media(max-width: 375px ){
+    #container{
+        max-width: 100%;
+    }
+}
+}
 body{
     background-color: var(--stone-100);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
     font-size: 16px;
+    min-height: 100vh;
+}
+#container{
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 2rem;
 }
 p, ul > li, ol > li, th, td{
     font-family: var(--outfit-font);
@@ -60,33 +77,25 @@ p, ul > li, ol > li, th, td{
 ul > li, ol > li{
     line-height: 2rem;
 }
-#container{
-    background-color: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    padding: 2rem;
-    max-width: 40rem;
-    margin: 2rem;
+ 
+#reipe-header h1, p{
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 header > img{
-    border-radius: 10px;
     height: auto;
-    /* image will not exceed the width of it's container */
     max-width: 100%;
-    /*Maintains aspect ratio */
     min-width: 0px;
     flex-grow: 1;
     flex-shrink: 1;
-}
-header > p{
-    padding-bottom: 1rem;
 }
 h1, h2{
     font-family: var(--young-serif-font);
     font-weight: 400;
 }
-
+h2{
+    color: var(--brown-800);
+}
 .prep-time > h2{
     color: var(--rose-800);
     font-family: var(--outfit-font);
@@ -96,16 +105,20 @@ h1, h2{
     background-color: var(--rose-50);
     border-radius: 10px;
     padding: 1rem;
+    margin: 2rem;
 }
-.prep-time ul li{
-    text-indent: 1rem
+.ingredients, .instructions, .nutrition{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
-h2{
-    color: var(--brown-800);
+ul li{
+    text-indent: 1rem;
+    text-align: left;
 }
 table{
     width:100%;
-    border-collapse: collapse;
+    border-collapse: collapse; 
     table-layout: fixed;
 }
 td{
